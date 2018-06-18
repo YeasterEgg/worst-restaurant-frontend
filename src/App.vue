@@ -1,42 +1,54 @@
 <template>
-  <div id="app">
-    <Main />
+  <div class="w-100 h-100 min-h-100 flex flex-column monospace items-center pv3">
+    <Modal v-if="showModal" />
+    <Restaurant v-else/>
+    <Map />
   </div>
 </template>
 
 <script>
 import Vuex from 'vuex'
 import Vue from 'vue'
-import Main from './components/Main.vue'
+import Restaurant from './components/Restaurant.vue'
+import Map from './components/Map.vue'
+import Modal from './components/Modal.vue'
 
 Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
-    message: '',
-    radius: 10000,
+    worst: undefined,
+    loading: false,
+    location: window.location.pathname.split('/')[1],
+    latLng: undefined,
+    ready: false,
   },
   mutations: {
-    setMessage: (state, message) => { state.message = message },
-    setRadius: (state, radius) => { state.radius = radius },
-  }
+    setWorst: (state, worst) => { state.worst = worst },
+    setLocation: (state, location) => { state.location = location },
+    setLoading: (state, loading) => { state.loading = loading },
+    setLatLng: (state, latLng) => { state.latLng = latLng },
+    setReady: (state, ready) => { state.ready = ready }
+  },
 })
 
 export default {
   name: 'app',
   components: {
-    Main
+    Restaurant,
+    Map,
+    Modal,
   },
   store,
+  computed: {
+    showModal() { return !this.$store.state.ready }
+  },
 }
 </script>
 
-<style>
-#app {
+<style scoped>
+.monospace {
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

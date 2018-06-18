@@ -1,0 +1,15 @@
+html, div, p, span, .text {
+  color: #404040;
+}
+
+html {
+  background-color: #F6F6E8;
+}
+
+.bg-bluetto {
+  background-color: #00ACE9;
+}
+
+.bg-beigino {
+  background-color: #F6F6E8;
+}
