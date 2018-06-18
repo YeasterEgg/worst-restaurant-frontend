@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 h-100 min-h-100 flex flex-column monospace items-center pv3">
+  <div class="w-100 h-100 overflow-y-scroll flex flex-column monospace items-center pv3">
     <Modal v-if="showModal" />
     <Restaurant v-else/>
     <Map />

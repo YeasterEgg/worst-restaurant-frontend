@@ -1,14 +1,14 @@
 <template>
-  <div class="w-100 h-50 flex flex-column items-center bg-bluetto mb3 ph3 relative">
+  <div class="w-100 h-50 h-100-short flex flex-column items-center bg-bluetto mb3 ph3 relative">
     <div v-if="loading" class="absolute centered o-30 lds-dual-ring z-0" />
-    <div class="z-2 f1 b pv2">Be brave!</div>
-    <div class="z-2 f3 pv2">Try eating at:</div>
-    <div class="z-2 f3 pv2 flex flex-column items-center w-100">
-      <a :href="worstHref" target="_blank" class="tc text">
+    <div class="z-2 f2 b pv2">Be brave!</div>
+    <div class="z-2 f5 pv2">Try eating at:</div>
+    <div class="z-2 pv2 flex flex-column items-center w-100">
+      <a :href="worstHref" target="_blank" class="tc text f3">
         {{worstName}}
       </a>
       <hr class="w-90"/>
-      <div class="tc">{{worstAddress}}</div>
+      <div class="tc f4">{{worstAddress}}</div>
     </div>
     <a href="https://www.yelp.com" target="_blank" >
       <img src="/yelp.png" class="w-10-ns w-20 bottom-1 right-1 absolute" />

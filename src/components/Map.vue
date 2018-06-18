@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 h-50 flex flex-column items-center">
+  <div class="w-100 h-50 flex flex-column items-center dn-short">
     <div id="mapboxMap" class="w-100 h-100"></div>
     {{JSON.stringify(center)}}
   </div>

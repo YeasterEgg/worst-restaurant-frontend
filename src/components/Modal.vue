@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 h-50 bg-bluetto mb3 ph3 relative flex flex-column items-center justify-center">
+  <div class="w-100 h-50 h-100-short bg-bluetto mb3 ph3 relative flex flex-column items-center justify-center">
     <div v-if="loading" class="absolute centered o-30 lds-dual-ring z-999" />
     <div v-bind:class="{ 'o-50': loading }" class="w-100 h-100 flex flex-column justify-around items-center">
       <div class="z-2 f2 b pv2">Choose a place!</div>
@@ -13,18 +13,18 @@
           types="(cities)"
         />
         <div
-          class="z-2 f3 b pv2 ba pa2 pointer bg-beigino w-60 tc"
+          class="z-2 f4 b pv2 ba pa2 pointer bg-beigino w-60 tc"
           v-on:click="startSearch"
           v-if="confirmPlace"
         >Search!</div>
         <div
-          class="z-2 f3 b pv2 ba pa2 bg-beigino w-60 tc gray"
+          class="z-2 f4 b pv2 ba pa2 bg-beigino w-60 tc gray"
           v-else
         >Search!</div>
       </div>
-      <div class="z-2 f3 b pv2">or</div>
+      <div class="z-2 f5 b pv2">or</div>
       <div
-        class="z-2 f3 b pv2 ba pa2 pointer bg-beigino"
+        class="z-2 f4 b pv2 ba pa2 pointer bg-beigino"
         v-on:click="locateAndStartSearch"
       >Around me!</div>
     </div>

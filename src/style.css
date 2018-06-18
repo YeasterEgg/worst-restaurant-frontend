@@ -13,3 +13,8 @@ html {
 .bg-beigino {
   background-color: #F6F6E8;
 }
+
+@media screen and (max-height: 20em) {
+  .dn-short { display: none }
+  .h-100-short {height: 100% }
+}
